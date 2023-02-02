@@ -1,0 +1,49 @@
+package str1;
+class BMI{
+	
+	private String name;
+	private int age;
+	private double weight;
+	private double height;
+	BMI(String name,int age,double weight,double height){
+		this.name=name;
+		this.age=age;
+		this.weight=weight;
+		this.height=height;
+	}
+	BMI(String name,double weight,double height){
+		this.name=name;
+		this.age=20;
+		this.weight=weight;
+		this.height=height;
+	}
+	public void getbmi() {
+		System.out.println("name is"+name);
+		System.out.println("age is"+age);
+		System.out.println("weight is"+weight);
+		System.out.println("height is"+height);
+	}
+	public void getstatus() {
+		if (weight>90)
+		{
+			System.out.println("overweight");
+		}
+		else 
+			System.out.println("not overweight");
+	}
+}
+
+public class Newmain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BMI b1=new BMI("satya",20,50,6);
+		BMI b2=new BMI("sat",91,5);
+		b1.getbmi();
+		b1.getstatus();
+		b1.getbmi();
+		b2.getstatus();
+
+	}
+
+}

@@ -1,0 +1,35 @@
+package str1;
+import java.util.Scanner;
+class Temperature{
+	 private double ftemp;
+	 public Temperature(double ftemp) {
+	        this.ftemp = ftemp;
+	    }
+	 public void setFahrenheit(double ftemp) {
+	        this.ftemp = ftemp;
+	    }
+	 public double getFahrenheit() {
+	        return ftemp;}
+	 public double getCelsius() {
+	        return (5.0 / 9.0) * (ftemp - 32);
+	    }
+
+	    // getKelvin method
+	    public double getKelvin() {
+	        return ((5.0 / 9.0) * (ftemp - 32)) + 273;
+	    }
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner sc = new Scanner(System.in);
+	        System.out.print("Enter Fahrenheit temperature: ");
+	        double ftemp = sc.nextDouble();
+            Temperature temp = new Temperature(ftemp);
+	        System.out.println("Temperature in Celsius: " + temp.getCelsius());
+	        System.out.println("Temperature in Kelvin: " + temp.getKelvin());
+	    }
+
+}

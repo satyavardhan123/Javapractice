@@ -1,0 +1,51 @@
+package str1;
+import java.util.Scanner;
+class Order{
+	public int orderid;
+	public String orderedfood;
+	public double totalprice;
+	public String status;
+	
+	Order(){
+		orderid=0;
+		orderedfood="";
+		totalprice=0;
+		status="ordered";
+		
+	}
+	Order(int orderid, String orderedfood,int totalprice){
+		this.orderid=orderid;
+		this.orderedfood=orderedfood;
+		this.totalprice=totalprice;
+		this.status="ordered";
+		
+	}
+	void Totalprice(int n){
+		double total=0;
+		total=n+(n*0.05);
+		System.out.println("price "+total);
+		
+	}
+}
+public class main5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in=new Scanner(System.in);
+		System.out.println("enter values");
+		System.out.println("enter id");
+		int id=in.nextInt();
+		System.out.println("enter food");
+		String str=in.next();
+		System.out.println("enter price");
+		int total=in.nextInt();
+		Order s1=new Order();
+		Order s2=new Order(id,str,total);
+		s2.Totalprice(total);
+		System.out.println(s2.orderid);
+		System.out.println(s2.orderedfood);
+		System.out.println(s2.status);
+
+	}
+
+}
